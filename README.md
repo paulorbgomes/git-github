@@ -1,2 +1,3 @@
 # git-github
- Estudos sobre Git e GitHub.
+* Estudos sobre Git e GitHub;
+* **Referências:** Curso em Vídeo e Plataforma DevMedia.
