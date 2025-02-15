@@ -1,0 +1,60 @@
+APÊNDICE GIT
+
+1. Repositório (pasta para armazenar os arquivos):
+   - git init
+   - git clone https://github.com/NOME-USER/NOME-REPO
+
+2. Após as modificações nos arquivos (adicionar à Stage):
+   - git add .
+   - git add nome_arquivo
+
+3. Arquivos adicionados à Stage (salvar no repositório remoto):
+   - git commit -m "Texto explicativo ..."
+   - git commit -a -m "Texto explicativo ..."
+      OBS: -a adiciona todos os arquivos modificados desde o último commit
+
+4. Remover arquivo do repositório git:
+   - git rm nome_arquivo
+   - git commit -m "Texto informando a exclusão"
+      OBS: além de remover do repositório git local, o comando rm também remove o arquivo
+           do diretório de trabalho (área de trabalho/workspace)
+
+5. - git status (mostra o estado do diretório de trabalho e da Stage)
+   - git diff nome_arquivo (destaca as modificações realizadas nos arquivos do diretório
+                            de trabalho e que ainda não foram movidas para a Stage. Muitas vezes
+                             o git diff é utilizado antes de um git add e git commit)
+   - git log (lista as informações dos últimos commits: data, autor, hora, descrição do commit)
+
+6. Push e Pull
+   - git push (copia os commits mais recentes do repositório local para o repositório remoto)
+        comando: git push origin master
+   - git pull (atualiza o repositório local baseado no repositório remoto)
+
+7. Branches
+   - git branch nome_branch (cria um novo branch, supondo que esse branch ainda não existe)
+   - git branch (lista as branchs existentes e qual está ativa no momento)
+   - git checkout nome_branch (muda do branch corrente para um novo branch nomeado nome_branch)
+   - git merge nome_branch (comando executado no branch que irá receber as modificações
+                            realizadas em nome_branch, ex. branch master)
+   - git branch -d nome_branch (remove o branch nome_branch caso não seja mais importante)
+
+8. Branches Remotos
+   - Passos para o push da branch local para o repositório remoto ...
+   - Cria-se uma branch local (git branch nome_branch)
+   - Realiza-se alguns commits nesse branch
+   - Push desse branch no repositório remoto: git push -u origin nome_branch (sintaxe valida para o 1° push)
+   - Nos comandos seguintes usar: git push origin nome_branch
+   - Os comandos acima criam um branch no repositório remoto!
+
+   - Passos para o pull da branch remota (comandos executados no master) ...
+   - git pull
+   - git checkout -t origin/nome_branch (cria o branch local nome_branch para rastrear as mudanças
+                                         no branch remoto origin/nome_branch)
+
+   - git branch -d nome_branch (deleta a branch no repositório local)
+   - git push origin --delete nome_branch (deleta o branch remoto)
+
+
+
+
+
